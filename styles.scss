@@ -1,9 +1,23 @@
 ---
 ---
 
-$purple: #c68fd6;
+@import 'https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap';
+
+$purple: #832b99;
+$lightpurple: #c68fd6;
+$gold: #ffd700;
+$lightyellow: #fff09e;
+$brown: #723c1d;
+$beige: #f2d3b9;
+
+$main: 'Alata', sans-serif;
+$body: 'Open sans', sans-serif;
 
 .cover{
     height: 400px;
-    background-color: $purple;
+    background-color: $lightpurple;
+}
+
+h1 {
+    font-family: $main;
 }
