@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap';
 .cover { height: 400px; background-color: #c68fd6; }
+
+h1 { font-family: "Alata", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */

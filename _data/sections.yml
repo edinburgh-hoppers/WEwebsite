@@ -1,0 +1,6 @@
+- title: "Meet the team"
+  includeFrom: meetTeam.html
+- title: "Schedule"
+  includeFrom: schedule.html
+- title: "Get in touch"
+  includeFrom: contactUs.html
