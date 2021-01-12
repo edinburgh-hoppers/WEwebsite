@@ -13,6 +13,9 @@ $beige: #f2d3b9;
 $main: 'Alata', sans-serif;
 $body: 'Open sans', sans-serif;
 
+body{
+    background-color: rgba($gold, 0.2);
+}
 
 .cover{
     height: 400px;
@@ -23,9 +26,13 @@ h1 {
     font-family: $main;
 }
 
+.card{
+    background-color: whitesmoke;
+}
 /*
 Contact us
 */
+
 
 #contactUs img{
     width: 150px;
