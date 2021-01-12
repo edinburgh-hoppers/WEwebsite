@@ -3,4 +3,13 @@
 
 h1 { font-family: "Alata", sans-serif; }
 
+/*
+Contact us
+*/
+#contactUs img { width: 150px; transition: all 0.3s; }
+
+#contactUs img:hover { transform: scale(1.04); }
+
+@media (max-width: 800px) { #contactUs img { width: 90px; } }
+
 /*# sourceMappingURL=styles.css.map */

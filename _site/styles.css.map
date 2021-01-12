@@ -5,8 +5,8 @@
 		"styles.scss"
 	],
 	"sourcesContent": [
-		"@import 'https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap';\n\n$purple: #832b99;\n$lightpurple: #c68fd6;\n$gold: #ffd700;\n$lightyellow: #fff09e;\n$brown: #723c1d;\n$beige: #f2d3b9;\n\n$main: 'Alata', sans-serif;\n$body: 'Open sans', sans-serif;\n\n.cover{\n    height: 400px;\n    background-color: $lightpurple;\n}\n\nh1 {\n    font-family: $main;\n}"
+		"@import 'https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap';\n\n$purple: #832b99;\n$lightpurple: #c68fd6;\n$gold: #ffd700;\n$lightyellow: #fff09e;\n$brown: #723c1d;\n$beige: #f2d3b9;\n\n$main: 'Alata', sans-serif;\n$body: 'Open sans', sans-serif;\n\n\n.cover{\n    height: 400px;\n    background-color: $lightpurple;\n}\n\nh1 {\n    font-family: $main;\n}\n\n/*\nContact us\n*/\n\n#contactUs img{\n    width: 150px;\n    transition: all 0.3s;\n    &:hover{\n        transform:scale(1.04);\n    }\n    @media(max-width: 800px) {\n        width: 90px;\n    }\n}"
 	],
 	"names": [],
-	"mappings": "AAAA,OAAO,CAAP,8EAAO;AAYP,AAAA,MAAM,CAAA,EACF,MAAM,EAAE,KAAK,EACb,gBAAgB,EAXN,OAAO,GAYpB;;AAED,AAAA,EAAE,CAAC,EACC,WAAW,EATR,OAAO,EAAE,UAAU,GAUzB"
+	"mappings": "AAAA,OAAO,CAAP,8EAAO;AAaP,AAAA,MAAM,CAAA,EACF,MAAM,EAAE,KAAK,EACb,gBAAgB,EAZN,OAAO,GAapB;;AAED,AAAA,EAAE,CAAC,EACC,WAAW,EAVR,OAAO,EAAE,UAAU,GAWzB;;AAED;;EAEE;AAEF,AAAA,UAAU,CAAC,GAAG,CAAA,EACV,KAAK,EAAE,KAAK,EACZ,UAAU,EAAE,QAAQ,GAOvB;;AATD,AAGI,UAHM,CAAC,GAAG,CAGR,KAAK,CAAA,EACH,SAAS,EAAC,WAAW,GACxB;;AACD,MAAM,mBANV,GAAA,AAAA,UAAU,CAAC,GAAG,CAAA,EAON,KAAK,EAAE,IAAI,GAElB,EAAA"
 }
