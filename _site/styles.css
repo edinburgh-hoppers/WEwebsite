@@ -1,6 +1,19 @@
 @import 'https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap';
+body { background-color: rgba(255, 215, 0, 0.2); }
+
 .cover { height: 400px; background-color: #c68fd6; }
 
 h1 { font-family: "Alata", sans-serif; }
+
+.card { background-color: whitesmoke; }
+
+/*
+Contact us
+*/
+#contactUs img { width: 150px; transition: all 0.3s; }
+
+#contactUs img:hover { transform: scale(1.04); }
+
+@media (max-width: 800px) { #contactUs img { width: 90px; } }
 
 /*# sourceMappingURL=styles.css.map */

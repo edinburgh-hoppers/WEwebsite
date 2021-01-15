@@ -13,6 +13,10 @@ $beige: #f2d3b9;
 $main: 'Alata', sans-serif;
 $body: 'Open sans', sans-serif;
 
+body{
+    background-color: rgba($gold, 0.2);
+}
+
 .cover{
     height: 400px;
     background-color: $lightpurple;
@@ -20,4 +24,23 @@ $body: 'Open sans', sans-serif;
 
 h1 {
     font-family: $main;
+}
+
+.card{
+    background-color: whitesmoke;
+}
+/*
+Contact us
+*/
+
+
+#contactUs img{
+    width: 150px;
+    transition: all 0.3s;
+    &:hover{
+        transform:scale(1.04);
+    }
+    @media(max-width: 800px) {
+        width: 90px;
+    }
 }
