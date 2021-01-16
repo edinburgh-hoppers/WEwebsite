@@ -5,13 +5,14 @@
 
 $purple: #832b99;
 $lightpurple: #c68fd6;
-$gold: #ffd700;
+$lightgold: #ffd700;
+$gold: #FFBB36;
 $lightyellow: #fff09e;
 $brown: #723c1d;
 $beige: #f2d3b9;
 
 $main: 'Alata', sans-serif;
-$body: 'Open sans', sans-serif;
+//$body: 'Open sans', sans-serif;
 
 .cover{
     height: 400px;
@@ -20,4 +21,83 @@ $body: 'Open sans', sans-serif;
 
 h1 {
     font-family: $main;
+}
+
+h3 {
+    font-family: $main;
+}
+
+h5 {
+    font-family: $main;
+    color: $lightpurple;
+}
+
+title {
+    font-family: $main;
+}
+
+a {
+    font-family: $main;
+    color: $gold;
+    
+}
+
+
+
+// ------------------ SCHEDULE STYLING ------------------ //
+
+.event {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.eventLeft {
+    background-color: $lightpurple;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.eventRight {
+    text-align: center;
+    padding: 20px;
+}
+
+#time {
+    color: $lightgold;
+    font-family: $main;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.eventDate {
+    width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid $purple; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   color: $purple;
+   font-family: $main;
+}
+
+.eventDate span {
+    background:#fff; 
+    padding:0 10px; 
+}
+
+.eventLink {
+    font-family: $main;
+    color: $gold;
+    //-webkit-text-stroke: 0.5px $purple;
+   //color: white;
+//    text-shadow:
+//        3px 3px 0 #000,
+//      -1px -1px 0 #000,  
+//       1px -1px 0 #000,
+//       -1px 1px 0 #000,
+//        1px 1px 0 #000;
+    //text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
