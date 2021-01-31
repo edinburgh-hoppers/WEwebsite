@@ -69,6 +69,26 @@ a {
     }
  }
 
+@media(max-width: 600px){
+    .eventDate{
+        font-size: 18px;
+    }
+    .eventLeft .eventRight{
+        display: block;
+        position: relative;
+    }
+    .eventLeft{
+        height: 40px;
+        background-color: $lightpurple;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+
+    .eventRight{
+        transform: translateY(10px);
+    }
+}
+
 .eventRight {
     text-align: center;
     padding: 20px;
