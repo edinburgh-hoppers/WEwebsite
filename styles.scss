@@ -14,6 +14,10 @@ $beige: #f2d3b9;
 $main: 'Alata', sans-serif;
 //$body: 'Open sans', sans-serif;
 
+body{
+    background-color: rgba($gold, 0.2);
+}
+
 .cover{
     height: 400px;
     background-color: $lightpurple;
@@ -22,6 +26,7 @@ $main: 'Alata', sans-serif;
 h1 {
     font-family: $main;
 }
+
 
 h3 {
     font-family: $main;
