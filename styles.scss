@@ -122,16 +122,53 @@ a {
     color: $gold;
 }
 
-// ------------------ CONTACT US STYLING ------------------ //
-
-
-#contactUs img{
-    width: 150px;
-    transition: all 0.3s;
-    &:hover{
-        transform:scale(1.04);
-    }
-    @media(max-width: 800px) {
-        width: 90px;
-    }
+.team {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 10px;
 }
+
+.teamLeft {
+    background-color: $lightpurple;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.teamRight {
+    text-align: center;
+    padding: 20px;
+}
+@keyframes example {
+  from {background-color: linear-gradient(180deg, pink, purple );}
+  to {background-color: white};
+}
+.teamlogo
+{
+	  width: 150px;
+      height: 150px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+	margin-top: 1%;
+	align-content: right;
+	margin-left: auto;
+  margin-right: auto;
+	background-image: linear-gradient(180deg, pink, purple );
+	margin-bottom: 1%;
+}
+
+#circle {
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 25px;
+	margin-top: 15%;
+	align-content: center;
+	background-image: linear-gradient(180deg, pink, purple );
+	  animation-name: example;
+  	animation-duration: 4s;
+    }
+
+
+
