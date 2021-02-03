@@ -14,12 +14,12 @@
 
     {% include nav.html %}
 
-
+<canvas id = "background"></canvas>
     <!-- PAGE COVER -->
+    <div id = "rest">
     <section class="container-fluid cover" id = "home">
       <div class="text-center pt-5 cover-inner">
-        <!-- <img src="{{ '/assets/img/' | append: page.logo | relative_url }}"/> -->
-        <div>
+        <div class = "text mx-auto">
 	        <h1>Women EmpowerED</h1>
 
 	        <!-- optional subtitle -->
@@ -46,4 +46,7 @@
     </div>
     {% endfor %}
     </section>
+  </div>
+    <script src = "../scripts/background.js"></script>
+    </body>
 </html>
