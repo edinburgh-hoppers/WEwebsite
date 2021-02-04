@@ -16,11 +16,12 @@ function startBackground(){
     //circle starts in the middle and fills screen background
     let fillBgd = window.setInterval(function(){
         ctx.clearRect(0,0,canvas.width, canvas.height);
-        if(r > canvas.width + 1000){
+        if(r > canvas.width + 900){
             clearInterval(fillBgd);
+            canvas.style.backgroundColor = "#ffd37e"
         }
         ctx.arc(canvas.width/2, canvas.height/2, r, 0, 2*Math.PI, false);
-        ctx.fillStyle = "rgba(255, 187, 54,0.6)";
+        ctx.fillStyle = "#ffd37e";
         ctx.fill();
         r = r + 10;
     },20);
@@ -85,8 +86,9 @@ function startBackground(){
         website.style.display = "block";
         website.style.transition = "opacity 0.8s";
         website.style.opacity = "1";
+        
     },1500);
-
+   
 }
 
 
