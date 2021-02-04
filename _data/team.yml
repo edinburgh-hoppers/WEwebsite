@@ -1,0 +1,23 @@
+- name: EconWomen
+  description:
+  img: "../images/societies/econwomen.jpg"
+
+- name: Edinburgh Women in STEM
+  description:
+  img: "../images/societies/euwistem.png"
+
+- name: Edinburgh Hoppers
+  description:
+  img: "../images/societies/hoppers.png"
+
+- name: Women in Law
+  description:
+  img: "../images/societies/womeninlaw.png"
+
+- name: Edinburgh Women in Business
+  description:
+  img: "../images/societies/womeninbusiness.jpg"
+
+- name: Women in Politics and IR
+  description:
+  img: "../images/societies/wpir.png"
