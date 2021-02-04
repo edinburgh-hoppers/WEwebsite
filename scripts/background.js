@@ -4,14 +4,26 @@ var canvas = document.getElementById('background');
 var ctx = canvas.getContext('2d');
 canvas.width  = window.innerWidth;
 canvas.height = window.screen.height;
-let y = 0;
+let y = -200;
 let flag = true;
-
+let r = 0;
 window.addEventListener('load', (event) => {
-    startAnimate();
+    startBackground();
   });
   
-function startAnimate(){
+  //current issue - slight misalignment on edges don't know why????
+function startBackground(){
+    // let fillBgd = window.setInterval(function(){
+    //     // ctx.clearRect(0,0,canvas.width, canvas.height);
+    //     if(r > canvas.width + 1000){
+    //         clearInterval(fillBgd);
+    //     }
+    //     ctx.arc(canvas.width/2, canvas.height/2, r, 0, 2*Math.PI, false);
+    //     ctx.fillStyle = "rgba(255, 187, 54,0.6)";
+    //     ctx.fill();
+    //     r = r + 10;
+    // },20);
+
     let backgroundFill = window.setInterval(function(){
         if(y > canvas.height){
             clearInterval(backgroundFill);
@@ -22,24 +34,25 @@ function startAnimate(){
             console.log(canvas.width)
             let oneLine = window.setInterval(function(){
                 if(x + dx > canvas.width){
-                    console.log("Entered")
-                    console.log(x+dx)
-                    ctx.beginPath();
-                    ctx.lineWidth=100;
-                    ctx.strokeStyle = "rgba(255, 187, 54,0.4)";
-                    ctx.moveTo(x,y);
-                    ctx.lineTo(x+dx,y);
-                    ctx.stroke();
+                    // console.log("Entered")
+                    // console.log(x+dx)
+                    // ctx.beginPath();
+                    // ctx.lineWidth=200;
+                    // ctx.strokeStyle = "rgba(255, 187, 54,0.4)";
+                    // ctx.moveTo(x,y);
+                    // ctx.lineTo(x+dx,y);
+                    // ctx.stroke();
                     clearInterval(oneLine);
                 }
                 ctx.beginPath();
-                ctx.lineWidth=100;
+                ctx.lineWidth=200;
                 ctx.strokeStyle = "rgba(255, 187, 54,0.4)";
                 ctx.moveTo(x,y);
+                console.log(x,y)
                 ctx.lineTo(x + dx,y);
                 ctx.stroke();
                 x = x + dx;
-            }, 30);
+            }, 20);
             
             flag = false;
         }  
@@ -51,22 +64,36 @@ function startAnimate(){
                     clearInterval(oneLine);
                 }
                 ctx.beginPath();
-                ctx.lineWidth=100;
+                ctx.lineWidth=200;
                 ctx.strokeStyle = "rgba(255, 187, 54,0.4)";
                 ctx.moveTo(x,y);
                 ctx.lineTo(x - dx,y);
                 ctx.stroke();
                 x = x - dx;
-            }, 30);
+            }, 20);
             // y = y + 100
             flag = true;
         } 
-        y = y + 100
-    }, 315); // had to extra 10 ms here to prevent y from incrementing before interval ended.
+        y = y + 200
+    }, 210); // had to extra 10 ms here to prevent y from incrementing before interval ended.
 
     window.setTimeout(function(){
         website.style.display = "block";
         website.style.transition = "opacity 0.8s";
         website.style.opacity = "1";
     },1500);
+
+    // window.setTimeout(function(){
+    //     for(let i = 0; i < 20; i++){
+    //         let t = document.createElement('div');
+    //         t.id = "triangle";
+    //         t.style.marginTop = Math.random() * canvas.height + "px";
+    //         t.style.marginLeft = Math.random() * canvas.width + "px";
+    //         website.appendChild(t);
+    //     }
+    // },2300); //above timeout + 800ms
 }
+
+
+
+
