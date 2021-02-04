@@ -77,6 +77,9 @@ a {
 .card{
     background-color: whitesmoke;
 }
+.card-title{
+    color: $purple;
+}
 
 
 
@@ -160,5 +163,32 @@ a {
     }
     @media(max-width: 800px) {
         width: 90px;
+    }
+}
+
+////-------nav bar---------------
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-link{
+    font-size: 1.5em;
+    color: $lightyellow;
+}
+
+.navbar-brand{
+    transform: translateY(-20px);
+    img{
+        border: #333 3px;
+    }
+    
+}
+
+.clickable{
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.05);
+        
     }
 }
