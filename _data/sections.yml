@@ -1,3 +1,5 @@
+- title: "Introduction"
+  includeFrom: intro.html
 - title: "Meet the team"
   includeFrom: meetTeam.html
 - title: "Schedule"
