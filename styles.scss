@@ -15,16 +15,43 @@ $main: 'Alata', sans-serif;
 //$body: 'Open sans', sans-serif;
 
 body{
-    background-color: rgba($gold, 0.2);
+    background-color: rgba($gold, 0.1);
+    margin:0;
 }
 
+/**
+background
+*/
+canvas{
+    top:0;
+    left:0;
+    position:fixed;
+    margin: 0;
+    z-index: -100;
+}
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid $purple;
+    z-index: 900;
+}
+
+//------------------------------
 .cover{
-    height: 400px;
-    background-color: $lightpurple;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    background-color: transparent;
+    .text{
+        transform: translateY(30vh);
+    }
 }
 
 h1 {
     font-family: $main;
+    font-size: 3em;
 }
 
 
@@ -49,6 +76,9 @@ a {
 
 .card{
     background-color: whitesmoke;
+}
+.card-title{
+    color: $purple;
 }
 
 
@@ -133,5 +163,32 @@ a {
     }
     @media(max-width: 800px) {
         width: 90px;
+    }
+}
+
+////-------nav bar---------------
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-link{
+    font-size: 1.5em;
+    color: $lightyellow;
+}
+
+.navbar-brand{
+    transform: translateY(-20px);
+    img{
+        border: #333 3px;
+    }
+    
+}
+
+.clickable{
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.05);
+        
     }
 }
