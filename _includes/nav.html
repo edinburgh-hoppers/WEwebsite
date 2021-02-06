@@ -1,4 +1,4 @@
-<nav class="nav navbar sticky-top navbar-expand-sm navbar-dark bg-dark mt-3 mb-4 mt-sm-4 mb-sm-5">
+<!-- <nav class="nav navbar sticky-top navbar-expand-sm navbar-dark bg-dark mt-3 mb-4 mt-sm-4 mb-sm-5">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -6,9 +6,9 @@
 
     <div class = "collapse navbar-collapse align-items-center justify-content-center text-center">
       <ul class="navbar-nav nav-tabs mr-auto mt-2 mt-lg-0">
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#home">Back to the top</a>
-        </li> -->
+                   <li class="nav-item">
+                    <a class="nav-link" href="#home">Back to the top</a>
+                  </li> 
         <a class="navbar-brand" href="#" style="height: 0">
           <img src="../images/megaphone.png" width="100" class="rounded-circle clickable" alt=""> 
         </a>
@@ -24,4 +24,39 @@
       </ul>
       
     </div>
-  </nav>
+  </nav> -->
+
+<!-- nav start -->
+<nav class="nav navbar nav-pills shadow-sm navbar-expand-sm navbar-light bg-light mt-3 mb-4 mt-sm-4 mb-sm-5 sticky-top">
+
+  <!--  toggle buttons (only on small screens)  -->
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <!--  main navbar content  -->
+  <div class="collapse navbar-collapse justify-content-center align-items-center text-center" id="navbar">
+    <ul class="nav navbar-nav">
+
+      <!-- home button (only on large screens) -->
+      <li class="navbar-brand mx-1 p-0 d-none d-sm-block">
+        <a class="nav-link" href="#" style="height: 0">
+          <img src="../images/megaphone.png" width="100" class="navbar-logo rounded-circle clickable shadow-sm">
+        </a>
+      </li>
+
+      {% for item in site.data.nav %}
+      <li class="nav-item rounded mx-1">
+        <a class="nav-link" href="{{ item.href }}">{{ item.text }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- home button (only on small screens) -->
+  <!-- <a href="{{ site.baseurl }}/" style="height: 0">
+    <img src="../images/megaphone.png" width="96" class="navbar-logo-sm rounded-circle clickable shadow-sm d-sm-none m-0">
+  </a> -->
+
+</nav>
+<!-- nav end --> 
