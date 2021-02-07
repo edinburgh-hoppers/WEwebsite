@@ -181,7 +181,6 @@ a {
 }
 
 .nav-link{
-    font-size: 1.5em;
     color: $lightyellow;
 }
 
@@ -198,5 +197,12 @@ a {
     &:hover{
         transform: scale(1.05);
         
+    }
+}
+
+.navbar-toggler{
+    &:hover{
+        background-color: rgba(#832b99,0.2);
+        transition: background 0.4s;
     }
 }

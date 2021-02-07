@@ -1,13 +1,13 @@
 <!-- nav start -->
-<nav class="nav navbar nav-pills shadow-sm navbar-expand-sm navbar-light bg-light mt-3 mb-4 mt-sm-4 mb-sm-5 sticky-top">
+<nav class="nav navbar nav-pills shadow-sm navbar-expand-md navbar-light bg-light mt-3 mb-4 mt-sm-4 mb-sm-5 sticky-top">
 
-  <!--  toggle buttons (only on small screens)  -->
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+   <!-- toggle buttons (only on small screens)  --> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ourNav" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button> -->
+  </button>
 
   <!--  main navbar content  -->
-  <div class="collapse navbar-collapse justify-content-center align-items-center text-center" id="navbar">
+  <div class="collapse navbar-collapse text-center justify-content-center" id="navbar">
     <ul class="nav navbar-nav">
 
       <!-- home button (only on large screens) -->
@@ -24,11 +24,23 @@
       {% endfor %}
     </ul>
   </div>
-
   <!-- home button (only on small screens) -->
   <!-- <a href="#" style="height: 0">
     <img src="../images/hands.png" width="96" class="navbar-logo-sm rounded-circle clickable shadow-sm d-sm-none m-0">
   </a> -->
 
 </nav>
+
+
+
+<!-- ONLY FOR SMALL screens -->
+<div class="collapse navbar-collapse text-center justify-content-center" id="ourNav">
+  <ul class="nav navbar-nav">
+    {% for item in site.data.nav %}
+    <li class="nav-item rounded mx-1">
+      <a class="nav-link" href="{{ item.href }}">{{ item.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 <!-- nav end --> 
