@@ -1,16 +1,16 @@
-- name: "Jenny Brennan"
-  shortDescription: Researcher - Ada Lovelace Institute
-  #img: jenny_brennan.jpg
-  link: https://jennybrennan.com/about
-- name: "Wendy Grossman"
-  shortDescription: Freelance science and technology writer
-  #img: wendy-grossman.jpeg
-  link: https://www.pelicancrossing.net/
+- name: "Nadia Alramli"
+  shortDescription: Director of Engineering at HubSpot
+  img: nadia_alramli.jpeg
+  link: https://ie.linkedin.com/in/nadiana
+- name: "Rikhi "
+  shortDescription:  Student at the Aerospace Systems Design Lab 
+  img: rikhi.jpeg
+  link: https://www.a-balancing-act.com/
 - name: "Fabrizio Mundaca"
   shortDescription: Hub Chiclayo Valley
   #img: Fabrizio_Mundana_Spark_Workshop.jpg
-  link: https://www.facebook.com/hubchiclayovalley
+  #link: https://www.facebook.com/hubchiclayovalley
 - name: "Elena Lape"
   shortDescription: 
   #img: elena_lape.jpeg
-  link: https://www.linkedin.com/in/elenalape/
+  #link: https://www.linkedin.com/in/elenalape/
