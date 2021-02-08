@@ -5,7 +5,7 @@
 - name: Edinburgh Women in STEM
   description:
   img: "../images/societies/euwistem.png"
-
+ 
 - name: Edinburgh Hoppers
   description:
   img: "../images/societies/hoppers.png"
@@ -16,7 +16,7 @@
 
 - name: Edinburgh Women in Business
   description:
-  img: "../images/societies/womeninbusiness.jpg" link: https://www.euwib.com/
+  img: "../images/societies/womeninbusiness.jpg" 
 
 - name: Women in Politics and IR
   description:
