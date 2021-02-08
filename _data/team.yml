@@ -1,6 +1,6 @@
 - name: EconWomen
   description:
-  img: "../images/societies/econwomen.jpg"
+  img: "../images/societies/econwomen.jpg" 
 
 - name: Edinburgh Women in STEM
   description:
@@ -16,7 +16,7 @@
 
 - name: Edinburgh Women in Business
   description:
-  img: "../images/societies/womeninbusiness.jpg"
+  img: "../images/societies/womeninbusiness.jpg" link: https://www.euwib.com/
 
 - name: Women in Politics and IR
   description:

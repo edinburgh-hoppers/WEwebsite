@@ -1,14 +1,14 @@
 
 <div id = "meetTheTeam"  class="container">
 
-{% for society in site.data[page.team] %}
+{% assign society = site.data.team %}
     <div class="row team"> 
         <div class="col-sm-2 teamLeft" >
             <div class="col-sm-10 teamRight">
             <div id = "circle"><img class = "rounded-circle" width = 100 src = "../images/megaphone.png"></div>
         </div>
     </div>
-    <div class = "teamlogo align-items-center justify-content-center"><img class = "rounded-circle {% if society.name != 'Edinburgh Women in Business' %} mt-4 {% else %} mt-2 {% endif %}" width = 90 src = {{ society.img }}></div>
+    <div class = "teamlogo align-items-center justify-content-center"> <a {% if society.link %} href = '{{ society.link }}' target = "_blank"{% endif %}> <img class = "rounded-circle {% if society.name != 'Edinburgh Women in Business' %} mt-4 {% else %} mt-2 {% endif %}" width = 90 src = {{ society.img }}></a></div>
    </div>
 {% endfor %}
 
