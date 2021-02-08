@@ -6,17 +6,12 @@
   </div>
 </div>
   
-              
-  
 <script src="./papaparse.min.js"></script>
 <script src="./moment.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   
-
   <script>
     const link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1zhTzgORhbgMdoLFOVy-rMiXJX3IOmpgvcHIM417wBdtrUV9RMRwsDxd0k4dcOmylu-vcPL-HZ67c/pub?output=csv';
-
-    console.log('anything')
 
     function init() {
       Papa.parse(link, {
@@ -24,7 +19,6 @@
       header: true,
       complete: function(results) {
         var data = results.data
-
         let date = moment();
         let eventDate;
         let formattedDate;
@@ -55,20 +49,13 @@
                 '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
                 '<p>'+ data[i].Description + '</p>' +
                 '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>'
-              
             );
-            
           }
           date = eventDate;
-          
         }
-
         $('.schedule').append('</tbody></table>')
-
       }
-
     })}
-
     window.addEventListener('DOMContentLoaded', init)
   </script>
 
