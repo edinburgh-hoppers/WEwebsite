@@ -73,6 +73,10 @@ a {
     color: $gold;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .card{
     background-color: whitesmoke;
 }
