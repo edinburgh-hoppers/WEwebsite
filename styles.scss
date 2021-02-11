@@ -71,7 +71,10 @@ title {
 a {
     font-family: $main;
     color: $gold;
-    
+}
+
+html {
+    scroll-behavior: smooth;
 }
 .box{
 	margin-top: -40%;
@@ -92,7 +95,15 @@ vertical-align:top;
     color: $purple;
 }
 
+// ------------------ SPEAKERS STYLING ------------------ //
 
+.speaker-name {
+    color: $purple;
+}
+
+.speaker-shortDescription {
+    color: grey;
+}
 
 // ------------------ SCHEDULE STYLING ------------------ //
 
@@ -183,9 +194,8 @@ vertical-align:top;
     padding-right: 10px;
 }
 
-.nav-link{
-    font-size: 1.5em;
-    color: $lightyellow;
+.nav-link {
+    color: grey;
 }
 
 .navbar-brand{
@@ -201,5 +211,12 @@ vertical-align:top;
     &:hover{
         transform: scale(1.05);
         
+    }
+}
+
+.navbar-toggler{
+    &:hover{
+        background-color: rgba(#832b99,0.2);
+        transition: background 0.4s;
     }
 }

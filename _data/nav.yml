@@ -1,0 +1,14 @@
+- text: "About the conference"
+  href: "#intro"
+
+- text: "Meet the team"
+  href: "#meetTheTeam"
+
+- text: "Our Speakers"
+  href: "#speakers"
+
+- text: "Schedule"
+  href: "#schedule"
+
+- text: "Contact Us"
+  href: "#contactUs"

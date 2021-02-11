@@ -1,0 +1,16 @@
+- name: "Nadia Alramli"
+  shortDescription: Director of Engineering at HubSpot
+  img: nadia_alramli.jpg
+  link: https://ie.linkedin.com/in/nadiana
+- name: "Rikhi "
+  shortDescription:  Student at the Aerospace Systems Design Lab 
+  img: rikhi_circle.jpg
+  link: https://www.a-balancing-act.com/
+- name: "Fabrizio Mundaca"
+  shortDescription: Hub Chiclayo Valley
+  #img: Fabrizio_Mundana_Spark_Workshop.jpg
+  #link: https://www.facebook.com/hubchiclayovalley
+- name: "Elena Lape"
+  shortDescription: 
+  #img: elena_lape.jpeg
+  #link: https://www.linkedin.com/in/elenalape/
