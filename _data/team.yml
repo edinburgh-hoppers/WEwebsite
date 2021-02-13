@@ -1,0 +1,33 @@
+- name: "EconWomen"
+  description: EconWomen 
+  img: econwomen.jpg  
+  link: https://www.edeconsoc.com/econwomen/
+
+- name: "Edinburgh Women in STEM"
+  description: Edinburgh Women in STEM
+  img: euwistem.png
+  link: https://www.euwistem.com/
+
+ 
+- name: "Edinburgh Hoppers"
+  description: Edinburgh Hoppers
+  img: hoppers.png
+  link: https://edinburgh-hoppers.github.io/website/
+
+- name: "Women in Law"
+  description: Women in Law
+  img: womeninlaw.png
+  link: https://www.facebook.com/UoEWomenInLaw
+
+
+- name: "Edinburgh Women in Business"
+  description: Edinburgh Women in Business
+  img: womeninbusiness.jpg
+  link: https://www.euwib.com/
+  
+
+- name: "Women in Politics and IR"
+  description: Women in Politics and IR
+  img: wpir.png
+  link:  https://www.womeninpir.org/
+
