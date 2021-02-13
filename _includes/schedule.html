@@ -1,138 +1,61 @@
 
 
-<div id = "schedule">
+<div id = "schedule" style = "scroll-margin-top: 200px;">
   <p><b>Note:</b> all times listed are in GMT (UTC+0).</p>
   <div id="events" class="container">
-    <!-- <div style="margin: 40px;"><h4 class="eventDate"><span> Whatever date </span></h4></div> -->
-    <!-- <div class="row event">
-      <div class="col-sm-2 eventLeft" >
-        <p id="time"><b>14:00</b></p>
-      </div>
-      <div class="col-sm-10 eventRight">
-        <p>Event title</p>
-        <a href="">Join the event!</a>
-      </div>
-    </div> -->
   </div>
 </div>
   
-    <!-- 
-    <table class = "table table-bordered"> 
-        <thead class="thead-light">
-            <tr>
-              <th scope="col">Time</th>
-              <th scope="col">Event</th>
-              <th scope="col">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <th scope = "row">3 pm</th>
-                <td>Panel</td>
-                <td>insert link</td> 
-              </tr> -->
-              
+<script src="./papaparse.min.js"></script>
+<script src="./moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   
-              <script src="./papaparse.min.js"></script>
-              <script src="./moment.min.js"></script>
-              <!-- <script src="./jquery.min.js"></script> -->
-              <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-                
+  <script>
+    const link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1zhTzgORhbgMdoLFOVy-rMiXJX3IOmpgvcHIM417wBdtrUV9RMRwsDxd0k4dcOmylu-vcPL-HZ67c/pub?output=csv';
 
-                <script>
-                  const link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1zhTzgORhbgMdoLFOVy-rMiXJX3IOmpgvcHIM417wBdtrUV9RMRwsDxd0k4dcOmylu-vcPL-HZ67c/pub?output=csv';
+    function init() {
+      Papa.parse(link, {
+      download: true,
+      header: true,
+      complete: function(results) {
+        var data = results.data
+        let date = moment();
+        let eventDate;
+        let formattedDate;
 
-                  console.log('anything')
+        for (var i = 0; i < data.length; i++) {
 
-                  function init() {
-                    Papa.parse(link, {
-                    download: true,
-                    header: true,
-                    complete: function(results) {
-                      var data = results.data
-                      console.log(data)
+          eventDate = moment(data[i].Date, "DD/MM/YYYY");
+          if (!date.isSame(eventDate)) {
+            formattedDate = eventDate.format("ddd, Do MMMM");
 
-                      //document.write("<table class = 'table table-bordered'>");
-                      
-                      //document.write('<table>');
-                        // $('.schedule').append(
-                        //   '<text><b>Note:</b> all times listed are in GMT (UTC+0).</text>' +
-                        //   '<table class = "table table-bordered"><tbody><tr><th scope = "row">3 pm</th><td>Panel</td><td>insert link</td> </tr>')
-                      
-                      let date = moment();
-                      let eventDate;
-                      let formattedDate;
-
-                      for (var i = 0; i < data.length; i++) {
-
-                        eventDate = moment(data[i].Date, "DD/MM/YYYY");
-                        if (!date.isSame(eventDate)) {
-                          formattedDate = eventDate.format("ddd, Do MMMM");
-
-                          $('#events').append(
-                            '<div style="margin: 40px;"><h4 class="eventDate"><span>' + formattedDate + '</span></h4></div>' +
-                            '<div class="row event">' +
-                            '<div class="col-sm-2 eventLeft" >' +
-                              '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
-                            '<div class="col-sm-10 eventRight">' +
-                              '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
-                              '<p>'+ data[i].Description + '</p>' +
-                              '<a class="eventLink" href="' + data[i].Link + '"> Click here to join the event on '+ data[i].Platform +'!</a></div></div>'
-                          );
-                          
-                        } else {
-                          $('#events').append(
-                            '<div class="row event">' +
-                            '<div class="col-sm-2 eventLeft" >' +
-                              '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
-                            '<div class="col-sm-10 eventRight">' +
-                              '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
-                              '<p>'+ data[i].Description + '</p>' +
-                              '<a class="eventLink" href="' + data[i].Link + '"> Click here to join the event on '+ data[i].Platform +'!</a></div></div>'
-                            
-                          );
-                          
-                        }
-                        date = eventDate;
-                        
-                        
-
-
-
-
-
-
-
-
-
-                        // $('.events').append(
-                        // '<tr>' +
-                        //     '<th scope = "row">'+ data[i].Time +'</th>' +
-                        //     '<td>Panel</td>' + 
-                        //     '<td>insert link</td>' +
-                        //   '</tr>'
-                        //   )
-                        // document.write('<tr>');
-                        // document.write('<th scope = "row">'+ data[i].Time +'</th>');
-                        // document.write('<td>' + data[i].Title + '</td>');
-                        // document.write('<td>' + data[i].Platform + '</td>');
-                        // document.write('</tr>');
-                      }
-
-                      $('.schedule').append('</tbody></table>')
-
-                      // document.write('</table>');
-
-
-                    }
-
-                  })}
-
-                  window.addEventListener('DOMContentLoaded', init)
-                </script>
-
-
-    
-  <!-- </tbody>
-</table> -->
+            $('#events').append(
+              '<div style="margin: 40px;"><h4 class="eventDate"><span>' + formattedDate + '</span></h4></div>' +
+              '<div class="row event">' +
+              '<div class="col-sm-2 eventLeft" >' +
+                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="col-sm-10 eventRight">' +
+                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<p>'+ data[i].Description + '</p>' +
+                '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>'
+            );
+            
+          } else {
+            $('#events').append(
+              '<div class="row event">' +
+              '<div class="col-sm-2 eventLeft" >' +
+                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="col-sm-10 eventRight">' +
+                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<p>'+ data[i].Description + '</p>' +
+                '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>'
+            );
+          }
+          date = eventDate;
+        }
+        $('.schedule').append('</tbody></table>')
+      }
+    })}
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
 

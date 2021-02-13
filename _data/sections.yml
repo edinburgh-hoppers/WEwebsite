@@ -1,5 +1,9 @@
+- title: "About the conference"
+  includeFrom: intro.html
 - title: "Meet the team"
   includeFrom: meetTeam.html
+- title: "Speakers"
+  includeFrom: speakers.html
 - title: "Schedule"
   includeFrom: schedule.html
 - title: "Get in touch"

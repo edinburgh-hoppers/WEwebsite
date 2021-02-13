@@ -15,16 +15,43 @@ $main: 'Alata', sans-serif;
 //$body: 'Open sans', sans-serif;
 
 body{
-    background-color: rgba($gold, 0.2);
+    background-color: rgba($gold, 0.1);
+    margin:0;
 }
 
+/**
+background
+*/
+canvas{
+    top:0;
+    left:0;
+    position:fixed;
+    margin: 0;
+    z-index: -100;
+}
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid $purple;
+    z-index: 900;
+}
+
+//------------------------------
 .cover{
-    height: 400px;
-    background-color: $lightpurple;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    background-color: transparent;
+    .text{
+        transform: translateY(30vh);
+    }
 }
 
 h1 {
     font-family: $main;
+    font-size: 3em;
 }
 
 
@@ -44,14 +71,39 @@ title {
 a {
     font-family: $main;
     color: $gold;
-    
 }
+
+html {
+    scroll-behavior: smooth;
+}
+.box{
+	margin-top: -40%;
+	margin-bottom: -30%;
+	margin:auto;
+  width: 50%;
+  border: 3px solid rgb(64, 0, 128);
+  background: whitesmoke;
+vertical-align:top;
+
+}
+
 
 .card{
     background-color: whitesmoke;
 }
+.card-title{
+    color: $purple;
+}
 
+// ------------------ SPEAKERS STYLING ------------------ //
 
+.speaker-name {
+    color: $purple;
+}
+
+.speaker-shortDescription {
+    color: grey;
+}
 
 // ------------------ SCHEDULE STYLING ------------------ //
 
@@ -171,6 +223,37 @@ a {
   	animation-duration: 4s;
     }
 
+}
 
+////-------nav bar---------------
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
+.nav-link {
+    color: grey;
+}
 
+.navbar-brand{
+    transform: translateY(-20px);
+    img{
+        border: #333 3px;
+    }
+    
+}
+
+.clickable{
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.05);
+        
+    }
+}
+
+.navbar-toggler{
+    &:hover{
+        background-color: rgba(#832b99,0.2);
+        transition: background 0.4s;
+    }
+}

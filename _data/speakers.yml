@@ -1,0 +1,27 @@
+- name: "Nadia Alramli"
+  shortDescription: Director of Engineering at HubSpot
+  img: nadia_alramli.jpg
+  link: https://ie.linkedin.com/in/nadiana
+- name: "Rikhi Roy"
+  shortDescription:  Student at the Aerospace Systems Design Lab 
+  img: rikhi_circle.jpg
+  link: https://www.a-balancing-act.com/
+- name: "Linda Bauld "
+  shortDescription: Professor of Public Health in the Usher Institute 
+  img: LBauld.jpg
+  link: https://www.ed.ac.uk/profile/linda-bauld
+
+- name: "Dr. Catriona McMillan "
+  shortDescription: Postdoctoral Fellow the University of Edinburgh 
+  img: Dr Catriona McMillan.jpg
+  link: https://www.law.ed.ac.uk/people/dr-catriona-mcmillan
+- name: "Patty Skuster "
+  shortDescription:  Senior Legal Advisor at Ipas
+  img: Patty Skuster.jpeg
+  link: https://www.linkedin.com/in/pattyskuster/
+- name: "Ximena Vengoechea"
+  shortDescription:  Member of the counsel for the Equality and Human Rights Commission Scotland
+  #img: Patty Skuster.jpeg
+  link: https://www.linkedin.com/in/ximena-vengoechea-05225250/
+
+
