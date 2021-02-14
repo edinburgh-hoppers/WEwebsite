@@ -29,14 +29,14 @@ canvas{
     margin: 0;
     z-index: -100;
 }
-#triangle{
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid $purple;
-    z-index: 900;
-}
+// #triangle{
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 100px solid $purple;
+//     z-index: 900;
+// }
 
 //------------------------------
 .cover{
@@ -255,3 +255,25 @@ vertical-align:top;
         transition: background 0.4s;
     }
 }
+
+//----------------- CONTACT US
+
+#contactUs{
+    img{
+        width:70px;
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            background-color: $purple;
+            color: $lightyellow;
+        }
+    }
+}
+
+// #intro{
+//     img{
+//         box-shadow: 0 0 16px 16px #eee inset;
+//     }
+    
+// }
