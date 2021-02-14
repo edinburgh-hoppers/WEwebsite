@@ -111,6 +111,12 @@ vertical-align:top;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin: 10px;
+    a{
+        text-decoration:none;
+        &:hover{
+            color:#832b99;
+        }
+    }
 }
 
 .eventLeft {
@@ -256,13 +262,13 @@ vertical-align:top;
     }
 }
 
-//----------------- CONTACT US
+//----------------- CONTACT US ---------------
 
 #contactUs{
     img{
         width:70px;
     }
-    a{
+    #email{
         text-decoration: none;
         &:hover{
             background-color: $purple;
@@ -271,9 +277,6 @@ vertical-align:top;
     }
 }
 
-// #intro{
-//     img{
-//         box-shadow: 0 0 16px 16px #eee inset;
-//     }
-    
-// }
+p::selection {
+    background-color: rgba($purple, 0.1);
+}
