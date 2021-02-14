@@ -29,14 +29,14 @@ canvas{
     margin: 0;
     z-index: -100;
 }
-#triangle{
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid $purple;
-    z-index: 900;
-}
+// #triangle{
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 100px solid $purple;
+//     z-index: 900;
+// }
 
 //------------------------------
 .cover{
@@ -111,6 +111,12 @@ vertical-align:top;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin: 10px;
+    a{
+        text-decoration:none;
+        &:hover{
+            color:#832b99;
+        }
+    }
 }
 
 .eventLeft {
@@ -254,4 +260,23 @@ vertical-align:top;
         background-color: rgba(#832b99,0.2);
         transition: background 0.4s;
     }
+}
+
+//----------------- CONTACT US ---------------
+
+#contactUs{
+    img{
+        width:70px;
+    }
+    #email{
+        text-decoration: none;
+        &:hover{
+            background-color: $purple;
+            color: $lightyellow;
+        }
+    }
+}
+
+p::selection {
+    background-color: rgba($purple, 0.1);
 }
