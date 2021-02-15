@@ -13,58 +13,56 @@
   </head>
   <body>
     {% include nav.html %}
-
-<canvas id = "background"></canvas>
-    <!-- PAGE COVER -->
-    <div id = "rest">
-    <section class="container-fluid cover" id = "home">
-      <div class="text-center pt-5 cover-inner">
-        <div class = "text mx-auto" style = "margin-top: -10%;">
-		<p style="float: left; clear: left"><img src="../images/megaphone.png" height="240px" width="240px" style = "border-radius: 120px; margin-left: 150%;margin-top:-10%;"></p>
-	        <h1>Women EmpowerED</h1>
-			<h3 style = "color:purple;"> 06.03 - 14.03</h3>
-			
-	        <!-- optional subtitle -->
-	        {% if page.subtitle %}
-	          <h3>{{ page.subtitle }}</h3>
-	        {% endif %}
-
-          {% if page.day %}
-	          <h4>{{ page.day }}</h4>
-          {% endif %}
-
-	<div class="row justify-content-center align-items-center ">
-	
-            <!-- the buttons on the cover -->
-          {% assign buttons= site.data.buttons%}
-			{%- for one in buttons -%}
-            <div class=" col-1.5 px-2 mt-5 clickable" style = "padding-left: 5px; padding-right:5px;">
-              <a class="button btn-lg pl-3 pr-3" target="_blank" href="{{ one.link }}" style = "background-color:purple;border-radius: 3px; color:white; text-decoration:none;">{{ one.text }}</a>
-            </div>
-            {% endfor %}
-	        </div>
-      </div>
-    </div>
-    </section>
     
-    <section class = "container">
-    {% for one in site.data[page.sectionData] %}
-    <div class="card shadow-sm border-0 mb-3">
-      <div class="card-body" id = "{% if member.id %}{{ member.id }}{% endif %}">
-        <h3 class="card-title mb-3 text-center">{{ one.title }}</h3>
-        <hr class="mb-4">
-        {% include {{ one.includeFrom }} %}
+      <canvas id = "background"></canvas>
+      <!-- PAGE COVER -->
+      <div id = "rest">
+        <section class="container-fluid cover" id = "home">
+          <div class="text-center pt-5 cover-inner">
+            <div class = "text mx-auto" style = "margin-top: -10%;">
+              <img src="../images/megaphone.png" height="240px" width="240px" style = "border-radius: 120px;">
+	            <h1>Women EmpowerED</h1>
+
+              <!-- optional subtitle -->
+              {% if page.subtitle %}
+                <h3>{{ page.subtitle }}</h3>
+              {% endif %}
+
+              {% if page.day %}
+                <h4>{{ page.day }}</h4>
+              {% endif %}
+       
+	            <div class="row justify-content-center align-items-center ">
+                <!-- the buttons on the cover -->
+              {% assign buttons= site.data.buttons%}
+			          {%- for one in buttons -%}
+                  <div class=" col-1.5 px-2 mt-5 clickable" style = "padding-left: 5px; padding-right:5px;">
+                    <a class="button btn-lg pl-3 pr-3" target="_blank" href="{{ one.link }}" style = "background-color:purple;border-radius: 3px; color:white; text-decoration:none;">{{ one.text }}</a>
+                  </div>
+                {% endfor %}
+	            </div>
+            </div>
+          </div>
+        </section>
+    
+        <section class = "container">
+          {% for one in site.data[page.sectionData] %}
+            <div class="card shadow-sm border-0 mb-3">
+              <div class="card-body" id = "{% if member.id %}{{ member.id }}{% endif %}">
+                <h3 class="card-title mb-3 text-center">{{ one.title }}</h3>
+                <hr class="mb-4">
+                {% include {{ one.includeFrom }} %}
+              </div>
+            </div>
+          {% endfor %}
+        </section>
       </div>
-    </div>
-    {% endfor %}
-    </section>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src = "../scripts/background.js"></script>
-  	<p class=" box text-center mb-3">
- Made with<img src="../images/heart-transparent.jpg"     style="width: 3em;height:1.5em; vertical-align:middle;"> at  <img src="../images/inf-logo.png" alt="The University of Edinburgh" align="justify" style="width: 2.5em; height: 2.5em;padding: 5px;margin-right: 14px;">
-</p>
-    </body>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src = "../scripts/background.js"></script>
+      <p class=" box text-center mb-3">
+        Made with<img src="../images/heart-transparent.jpg"     style="width: 3em;height:1.5em; vertical-align:middle;"> at  <img src="../images/inf-logo.png" alt="The University of Edinburgh" align="justify" style="width: 2.5em; height: 2.5em;padding: 5px;margin-right: 14px;">
+      </p>
+  </body>
 </html>
