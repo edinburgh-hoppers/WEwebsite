@@ -3,12 +3,15 @@
 
   {%- for society in societies -%}
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 column mb-5" style="height: 200px; text-align: center;">
-        <a {% if speaker.link %} href = '{{ society.link }}' target = "_blank"{% endif %}> <img class = "rounded-circle clickable  mt-2 " width = 100 src = "{%- if society.img -%}
+        <a {% if society.link %} href = '{{ society.link }}' target = "_blank"{% endif %}> <img class = "rounded-circle clickable  mt-2 " width = 100 src = "{%- if society.img -%}
             {{ '/images/societies/' | append: society.img | relative_url }}
           {%- else -%}
            {{ '/images/megaphone.png' | relative_url }}
           {%- endif -%}">
         </a>
+<!-- For space purpose -->
+	<h5></h5>
+	<h6 class = "society-nanme">{{society.name}}</h6>
     </div>
   {%- endfor -%}
 
