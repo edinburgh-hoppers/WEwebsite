@@ -3,7 +3,7 @@ var website = document.getElementsByClassName('cover')[0];
 var canvas = document.getElementById('background');
 var ctx = canvas.getContext('2d');
 canvas.width  = window.innerWidth;
-canvas.height = window.screen.height;
+canvas.height = window.innerHeight;
 let lwidth;
 if(canvas.width > 1000){
     lwidth = 40;
@@ -27,7 +27,7 @@ function startBackground(){
         if(r > canvas.width/2 + 400 ){
             clearInterval(fillBgd);
             let tx = -10, ty = canvas.height/4;
-            let bx = canvas.width - ty - 10, by = canvas.height;
+            let bx = canvas.width - ty - 20, by = canvas.height + 10;
             let ribbon = window.setInterval(function(){
                 if(ty < 0){
                     clearInterval(ribbon);
