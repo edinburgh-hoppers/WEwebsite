@@ -9,3 +9,4 @@ Basic notes:
   `bundle exec jekyll serve`
 - Each of the pages in the website is under \_pages. There is only one stylesheet - styles.scss, which is in the root folder. We can include code blocks by writing them in HTML files and then putting it in the \_includes folder. 
 
+## NOTE: ```bundle exec jekyll serve --baseurl "" ``` only works with the github pages plugin. 
