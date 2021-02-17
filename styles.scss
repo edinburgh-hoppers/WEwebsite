@@ -14,6 +14,11 @@ $beige: #f2d3b9;
 $main: 'Alata', sans-serif;
 //$body: 'Open sans', sans-serif;
 
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: $lightpurple;
+}
+
 html, body {
     width:  100%;
     height: 100%;
