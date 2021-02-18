@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href = "{{ site.baseurl }}/styles.css"/>
+    <link rel="stylesheet" href = {{ '/styles.css' | relative_url }}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Women EmpowerED</title>
-    <link rel="icon" href= "{{site.baseurl}}/images/megaphone.png" class = "rounded-circle">
+    <link rel="icon" href= {{ "images/megaphone.png" | relative_url }} class = "rounded-circle">
   </head>
   <body>
     {% include nav.html %}
@@ -23,7 +23,7 @@
         <section class="container-fluid cover" id = "home">
           <div class="text-center pt-5 cover-inner">
             <div class = "text mx-auto" style = "margin-top: -10%;">
-              <img src="{{ site.baseurl }}/images/megaphone.png" height="240px" width="240px" style = "border-radius: 120px;">
+              <img src={{ "/images/megaphone.png" | relative_url }} height="240px" width="240px" style = "border-radius: 120px;">
 	            <h1>Women EmpowerED</h1>
 
               <!-- optional subtitle -->
