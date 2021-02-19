@@ -50,16 +50,27 @@ canvas{
     .text{
         transform: translateY(30vh);
     }
+    @media (max-height: 690px){
+        height: 750px;
+        padding-bottom: 50px;
+      }
 }
 
 .text{
     width: 700px;
     @media(max-width: 670px) {
         width: 50%;
+        font-size: 0.75em;
+        margin:0;
     }
     img{
         @media(min-width: 700px) {
             float:left;
+        }
+    }
+    a{
+        @media(max-width: 670px) {
+            font-size: 1.1em;
         }
     }
 }
