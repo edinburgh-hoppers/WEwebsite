@@ -54,6 +54,9 @@ canvas{
 
 .text{
     width: 700px;
+    @media(max-width: 670px) {
+        width: 50%;
+    }
     img{
         @media(min-width: 700px) {
             float:left;

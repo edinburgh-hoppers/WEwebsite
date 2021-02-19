@@ -5,7 +5,7 @@ var ctx = canvas.getContext('2d');
 canvas.width  = window.innerWidth;
 canvas.height = window.innerHeight;
 let lwidth;
-if(canvas.width > 1000){
+if(canvas.width > 800){
     lwidth = 40;
 }
 else{
@@ -26,10 +26,11 @@ function startBackground(){
         // ctx.clearRect(0,0,canvas.width, canvas.height);
         if(r > canvas.width/2 + 400 ){
             clearInterval(fillBgd);
+            document.getElementsByTagName('body')[0].style.backgroundColor = "#ffd37e";
             let tx = -10, ty = canvas.height/4;
             let bx = canvas.width - ty - 20, by = canvas.height + 10;
             let ribbon = window.setInterval(function(){
-                if(ty < 0){
+                if(bx > canvas.width){
                     clearInterval(ribbon);
                 }
                 drawLine(tx,ty,lwidth,'#832b99');
