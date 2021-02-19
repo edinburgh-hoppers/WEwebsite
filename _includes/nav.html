@@ -34,10 +34,10 @@
 
 
 <!-- ONLY FOR SMALL screens -->
-<div class="collapse navbar-collapse text-center justify-content-center" id="ourNav">
+<div class="collapse navbar-collapse text-center justify-content-center sticky-top bg-light m-0 shadow" id="ourNav" style="position:absolute; top: 80px">
   <ul class="nav navbar-nav">
     {% for item in site.data.nav %}
-    <li class="nav-item rounded mx-1">
+    <li class="nav-item rounded">
       <a class="nav-link" href="{{ item.href }}">{{ item.text }}</a>
     </li>
     {% endfor %}
