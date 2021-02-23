@@ -20,7 +20,7 @@
   img: Patty Skuster.jpeg
   link: https://www.linkedin.com/in/pattyskuster/
 - name: "Ximena Vengoechea"
-  shortDescription:  Member of the counsel for the Equality and Human Rights Commission Scotland
+  shortDescription:  Scottish barrister and a member of the panel of counsel for the EHRCS.
   img: Ximena-copy.png
   link: https://www.linkedin.com/in/ximena-vengoechea-05225250/
 - name: "Jag Sheemar"
@@ -34,6 +34,9 @@
 - name: "Joanna Lukowicz"
   shortDescription: Administrative Business Partner at Google
   img: Joanna.jpg
+- name: "Pr Cowan"
+  shortDescription: Professor of Queer and Feminist Studies at Edinburgh Law School
+  img: cowan.jpg
   #link:
 
 
