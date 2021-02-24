@@ -24,7 +24,15 @@
         let formattedDate;
 
         for (var i = 0; i < data.length; i++) {
-
+          
+          var linkMessage;
+          if (data[i].Link) {
+            linkMessage = '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>';
+            
+          } else {
+            linkMessage =  '<a class="eventLink" href=""> Sign up link coming soon!</a></div></div>';
+          }
+          
           eventDate = moment(data[i].Date, "DD/MM/YYYY");
           if (!date.isSame(eventDate)) {
             formattedDate = eventDate.format("ddd, Do MMMM");
@@ -36,8 +44,7 @@
                 '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
               '<div class="col-sm-10 eventRight">' +
                 '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
-                '<p>'+ data[i].Description + '</p>' +
-                '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>'
+                '<p>'+ data[i].Description + '</p>' + linkMessage 
             );
             
           } else {
@@ -47,13 +54,11 @@
                 '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
               '<div class="col-sm-10 eventRight">' +
                 '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
-                '<p>'+ data[i].Description + '</p>' +
-                '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>'
+                '<p>'+ data[i].Description + '</p>' + linkMessage
             );
           }
           date = eventDate;
         }
-        $('.schedule').append('</tbody></table>')
       }
     })}
     window.addEventListener('DOMContentLoaded', init)
