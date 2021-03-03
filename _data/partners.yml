@@ -16,7 +16,7 @@
 - name: "Enterprise"
   img: Enterprise.png
   #link:
-  width: 100px
+  width: 300px
 - name: "AdvoSoc"
   img: AdvoSoc.png
   #link:
