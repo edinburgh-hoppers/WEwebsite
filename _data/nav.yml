@@ -4,14 +4,16 @@
 - text: "Meet the team"
   href: "#meetTheTeam"
 
+- text: "Affiliated Societies"
+  href: "#partners"
 - text: "Our Speakers"
   href: "#speakers"
+
+
 
 - text: "Schedule"
   href: "#schedule"
 
-- text: "Affiliated Societies"
-  href: "#partners"
 
 - text: "Contact Us"
   href: "#contactUs"

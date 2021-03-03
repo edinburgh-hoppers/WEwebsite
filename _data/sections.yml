@@ -2,12 +2,14 @@
   includeFrom: intro.html
 - title: "Meet the team"
   includeFrom: meetTeam.html
-- title: "Speakers"
-  includeFrom: speakers.html
-- title: "Schedule"
-  includeFrom: schedule.html
 - title: "Affiliated Societies"
   includeFrom: partners.html
+- title: "Speakers"
+  includeFrom: speakers.html
+
+- title: "Schedule"
+  includeFrom: schedule.html
+
 - title: "Get in touch"
   includeFrom: contactUs.html
 
