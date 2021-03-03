@@ -1,0 +1,16 @@
+<div id="speakers" class="row" style = "scroll-margin-top: 200px;">
+
+  {% assign members = site.data.partners %}
+
+  {%- for member in members -%}
+    <div class="col-12 col-lg-6">
+     
+        <img src="{{ site.baseurl }}/images/partners/{{ member.file }}" alt="{{ member.name }}">
+      
+    </div>
+
+    {%- endfor -%}
+
+  </div>
+
+</div>

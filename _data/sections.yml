@@ -6,5 +6,9 @@
   includeFrom: speakers.html
 - title: "Schedule"
   includeFrom: schedule.html
+- title: "Affiliated Societies"
+  includeFrom: partners.html
 - title: "Get in touch"
   includeFrom: contactUs.html
+
+
