@@ -4,8 +4,9 @@
 
   {%- for member in members -%}
     <div class="col-12 col-lg-6">
-     
+       <a href="{{ member.link }}" target="_blank" style="width: {{ member.width }}; max-width : 100%;" class="d-block mx-auto">
         <img src="{{ site.baseurl }}/images/partners/{{ member.file }}" alt="{{ member.name }}">
+		 </a>
       
     </div>
 
