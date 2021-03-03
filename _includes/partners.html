@@ -1,19 +1,5 @@
 <div id="partners" style = "scroll-margin-top: 200px;">
 
 
-  {% assign partners = site.data.partners %}
-
-  {%- for partner in partners -%}
-  
-
-         <img   src="
-          {%- if partner.img -%}
-            {{ '/images/partners/' | append: partner.img | relative_url }}
-          style = " max-height: 200px;
-  max-width: 100%;
-  margin: 1.5rem auto;
-  display: block;">
-        
  
- {%- endfor -%}
 </div>
