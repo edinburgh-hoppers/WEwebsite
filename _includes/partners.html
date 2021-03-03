@@ -2,18 +2,7 @@
 
   
 <div class="row justify-content-center">
-{% assign members = site.data.partners %}
-  {%- for member in members -%}
-     <div class="col-6 col-sm-4 col-md-3 col-lg-2 column mb-5" style="height: 200px; text-align: center;">
-        <a {% if member.link %} href = '{{ member.link }}' target = "_blank"{% endif %}> <img class="w-75 rounded-circle mb-2 clickable" src="
-          {%- if member.img -%}
-            {{ '/images/partners/' | append: members.img | relative_url }}
-          {%- else -%}
-           {{ '/images/megaphone.png' | relative_url }}
-          {%- endif -%}">
-        </a>
 
-    {%- endfor -%}
 
   </div>
 
