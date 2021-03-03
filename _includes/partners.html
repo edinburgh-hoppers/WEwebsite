@@ -1,0 +1,19 @@
+<div id="partners" style = "scroll-margin-top: 200px;">
+  {% assign partners = site.data.partners %}
+  <div class="row justify-content-center align-items-center">
+    {%- for partner in partners -%}
+    <div class ="col-12 col-lg-6">
+      <a href = "{{ partner.link }}">
+        <img src="
+          {%- if partner.img -%}
+            {{ '/images/partners/' | append: partner.img | relative_url }}
+          {%- endif -%}" style = "width: {{ partner.width }}; max-width:400px;
+         display: block; margin: 1.5rem auto;" 
+         class="{% if partner.canRound == 'yes'%} rounded-circle {% endif %} clickable">
+      </a>
+    </div>
+         
+        
+    {%- endfor -%}
+  </div>
+</div>
