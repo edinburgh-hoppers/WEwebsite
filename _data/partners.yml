@@ -1,20 +1,20 @@
 - name: "GirlSecurity"
-  file: GirlSecurity.png
+  img: GirlSecurity.png
   #link: "https://www.hubspot.com/"
   width: 321px
 - name: "SE7EN"
-  file: SE7EN.jpg
+  img: SE7EN.jpg
   link:
   width: 300px
 - name: "Solidaritee"
-  file: Solidaritee.png
+  img: Solidaritee.png
   width: 350px
 - name: "AIESEC"
-  file: AIESEC.png
+  img: AIESEC.png
   #link: "https://www.hubspot.com/"
   width: 321px
 - name: "Enterprise"
-  file: Enterprise.png
+  img: Enterprise.png
   #link:
   width: 300px
 - name: "WSA"
@@ -22,6 +22,6 @@
   #link:
   width: 300px
 - name: "AdvoSoc"
-  file: AdvoSoc.png
+  img: AdvoSoc.png
   #link:
   width: 300px
