@@ -25,13 +25,29 @@
 
         for (var i = 0; i < data.length; i++) {
           
+          if (data[i].Affiliated === 'yes') {
+            className = 'affEvent';
+            timeid = 'affTime';
+            leftClass = 'affEventLeft'
+            titleClass = 'affEventTitle';
+            linkClass = 'affEventLink';
+          } else {
+            className = 'event';
+            timeid = 'time';
+            leftClass = 'eventLeft'
+            titleClass = 'eventTitle';
+            linkClass = 'eventLink';
+          }
+
+
           var linkMessage;
           if (data[i].Link) {
-            linkMessage = '<a class="eventLink" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>';
+            linkMessage = '<a class="' + linkClass + '" href="' + data[i].Link + '"> Click here to sign up for the event!</a></div></div>';
             
           } else {
-            linkMessage =  '<a class="eventLink" href=""> Sign up link coming soon!</a></div></div>';
+            linkMessage =  '<a class="' + linkClass + '" href=""> Sign up link coming soon!</a></div></div>';
           }
+
           
           eventDate = moment(data[i].Date, "DD/MM/YYYY");
           if (!date.isSame(eventDate)) {
@@ -39,21 +55,21 @@
 
             $('#events').append(
               '<div style="margin: 40px;"><h4 class="eventDate"><span>' + formattedDate + '</span></h4></div>' +
-              '<div class="row event">' +
-              '<div class="col-sm-2 eventLeft" >' +
-                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="row ' + className + '">' +
+              '<div class="col-sm-2 ' + leftClass + '" >' +
+                '<h5 id="' + timeid + '"><b>' + data[i].Time + '</b></h5></div>' +
               '<div class="col-sm-10 eventRight">' +
-                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<h5 class="' + titleClass + '">' + data[i].Title +  '</h5>' +
                 '<p>'+ data[i].Description + '</p>' + linkMessage 
             );
             
           } else {
             $('#events').append(
-              '<div class="row event">' +
-              '<div class="col-sm-2 eventLeft" >' +
-                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="row ' + className + '">' +
+              '<div class="col-sm-2 ' + leftClass + '" >' +
+                '<h5 id="' + timeid + '"><b>' + data[i].Time + '</b></h5></div>' +
               '<div class="col-sm-10 eventRight">' +
-                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<h5 class="' + titleClass + '">' + data[i].Title +  '</h5>' +
                 '<p>'+ data[i].Description + '</p>' + linkMessage
             );
           }

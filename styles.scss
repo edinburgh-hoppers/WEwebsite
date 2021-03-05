@@ -143,17 +143,39 @@ vertical-align:top;
     }
 }
 
+.affEvent {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 10px;
+    a{
+        text-decoration:none;
+        &:hover{
+            color:$gold;
+        }
+    }
+}
+
 .eventLeft {
     background-color: $lightpurple;
     position: relative;
     border-radius: 10px 0px 0px 10px;
 }
 
+.affEventLeft {
+    background-color: #FECC6B;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.affEventTitle { 
+    color: $gold;
+}
+
 @media(max-width: 600px){
     .eventDate{
         font-size: 18px;
     }
-    .eventLeft .eventRight{
+    .eventLeft .eventRight .affEventLeft{
         display: block;
         position: relative;
     }
@@ -161,7 +183,12 @@ vertical-align:top;
         height: 40px;
         background-color: $lightpurple;
         border-radius: 10px 10px 0px 0px;
+    }
 
+    .affEventLeft{
+        height: 40px;
+        background-color: #FECC6B;
+        border-radius: 10px 10px 0px 0px;
     }
 
     .eventRight{
@@ -176,6 +203,16 @@ vertical-align:top;
 
 #time {
     color: $lightgold;
+    font-family: $main;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#affTime {
+    color: $lightpurple;
     font-family: $main;
     position: absolute;
     top: 50%;
@@ -203,6 +240,13 @@ vertical-align:top;
     font-family: $main;
     color: $gold;
 }
+
+.affEventLink {
+    font-family: $main;
+    color: $lightpurple;
+}
+
+// ------------------ TEAM STYLING ------------------ //
 
 .team {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
